@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const { tours } = require('./API/tours')
 
+app.get('/', (req, res) => {
+  res.send('Hello')
+})
+
 app.get('/api/tours', (req, res) => {
   res.status(200).json(tours)
 })
@@ -13,6 +17,6 @@ app.get('/api/tours/:tourID', (req, res) => {
   res.json(singleTour)
 })
 
-app.listen(80, () => {
-  console.log('Server is listening at port 80.')
+app.listen(8080, () => {
+  console.log('Server is listening at port 8080.')
 })

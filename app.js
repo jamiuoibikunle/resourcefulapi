@@ -13,6 +13,6 @@ app.get('/api/tours/:tourID', (req, res) => {
   res.json(singleTour)
 })
 
-app.listen(8080, () => {
-  console.log('Server is listening at port 8080.')
+app.listen(80, () => {
+  console.log('Server is listening at port 80.')
 })
